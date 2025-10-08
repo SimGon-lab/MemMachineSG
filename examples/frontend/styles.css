@@ -17,10 +17,10 @@ div[data-testid="column"] {
     margin-right: 0 !important;
     flex-grow: 1;
   }
-  
-  /* Align vertical divider better */
-  .vertical-divider {
+
+/* -- Align vertical divider better and make it pink -- */
+.vertical-divider {
     height: 100%;
-    border-left: 1px solid #ccc;
+    border-left: 2px solid #ff69b4; /* light pink instead of gray */
     margin: 0 0.4rem;
-  }
+}

@@ -1,26 +1,51 @@
-/* -- Sidebar width & padding -- */
-section[data-testid="stSidebar"]          { width: 230px !important; }
-section[data-testid="stSidebarContent"]   { width: 230px !important;
-                                            padding: 0.75rem; }
+/* -- Sidebar width, padding & background color -- */
+section[data-testid="stSidebar"] {
+    width: 230px !important;
+    background-color: #ffe6f0 !important; /* light pink background */
+}
 
-/* -- Title size -- */
-h1 { font-size: 2.1rem !important; margin-bottom: 1rem; }
+section[data-testid="stSidebarContent"] {
+    width: 230px !important;
+    padding: 0.75rem;
+    background-color: #ffe6f0 !important; /* match sidebar */
+}
+
+/* -- Title size & color -- */
+h1 {
+    font-size: 2.1rem !important;
+    margin-bottom: 1rem;
+    color: #ff69b4 !important; /* hot pink for headings */
+}
 
 /* -- Ensure long links wrap inside comparison columns -- */
-div.answer { white-space: pre-wrap; overflow-wrap: anywhere; }
+div.answer {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
 
-/* Tighten spacing between comparison columns */
+/* Tighten spacing between comparison columns & add hover highlight */
 div[data-testid="column"] {
     padding-left: 0.25rem !important;
     padding-right: 0.25rem !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
     flex-grow: 1;
-  }
+    transition: background-color 0.3s ease;
+}
+
+div[data-testid="column"]:hover {
+    background-color: #ffe6f0; /* light pink hover effect */
+}
 
 /* -- Align vertical divider better and make it pink -- */
 .vertical-divider {
     height: 100%;
     border-left: 2px solid #ff69b4; /* light pink instead of gray */
     margin: 0 0.4rem;
+}
+
+/* Optional: add subtle pink borders to answers */
+div.answer {
+    border-left: 2px solid #ffb6c1; /* pale pink border */
+    padding-left: 0.5rem;
 }
